@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.source       = {:git => 'https://github.com/gittowj/SKRefresh.git', :tag => s.version}
   s.source       = 'source/**/*.{h,m}'
   s.requires_arc = true
-  s.dependency = 'POP+MCAnimate'
+  s.dependency  'POP+MCAnimate'
 
 end
