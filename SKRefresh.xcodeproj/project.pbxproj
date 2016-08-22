@@ -41,6 +41,7 @@
 		30E877E71D68C08F002E61F5 /* SKRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKRefreshComponent.m; path = source/SKRefreshComponent.m; sourceTree = SOURCE_ROOT; };
 		30E877E81D68C08F002E61F5 /* UIView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Common.h"; path = "source/UIView+Common.h"; sourceTree = SOURCE_ROOT; };
 		30E877E91D68C08F002E61F5 /* UIView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Common.m"; path = "source/UIView+Common.m"; sourceTree = SOURCE_ROOT; };
+		30F5A7581D6ADF7300F2F32E /* SKRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKRefresh.h; path = "../../SKRefresh副本/source/SKRefresh.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		30E877DF1D68C06A002E61F5 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				30F5A7581D6ADF7300F2F32E /* SKRefresh.h */,
 				30E877E01D68C08F002E61F5 /* SKInfiniteScrollingView.h */,
 				30E877E11D68C08F002E61F5 /* SKInfiniteScrollingView.m */,
 				30E877E21D68C08F002E61F5 /* SKPopRefreshView.h */,
@@ -338,6 +340,7 @@
 				30E877DE1D68C050002E61F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
