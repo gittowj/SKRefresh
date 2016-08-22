@@ -3,6 +3,6 @@ platform :ios, '7.0'
 
 target "SKRefresh" do
 
-pod 'pod', '~> 1.0'
+pod 'pop', '~> 1.0'
 
 end
