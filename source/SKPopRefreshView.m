@@ -12,6 +12,13 @@
 
 @implementation SKPopBasicRefreshView
 
+- (void)startAnimating{
+
+}
+
+- (void)stopAnimating{
+
+}
 @end
 
 @interface SKPopRefreshView ()<POPAnimationDelegate>
@@ -107,7 +114,6 @@
         
         alayer.frame = fromRect;
         
-        double delayInSeconds = index * MenuButtonAnimationInterval;
         NSString *animationKey = @"StopPOPSpringAnimationKey";
         
         [self initailzerAnimationWithToPostion:toRect formPostion:fromRect atView:alayer beginTime:0.5 animationKey:(NSString *)animationKey];
@@ -125,7 +131,7 @@
 
 #pragma mark - Animation
 
-- (void)initailzerAnimationWithToPostion:(CGRect)toRect formPostion:(CGRect)fromRect atView:(CALayer *)view beginTime:(CFTimeInterval)beginTime animationKey:(NSString *)animationKey{
+- (void)initailzerAnimationWithToPostion:(CGRect)toRect formPostion:(CGRect)fromRect atView:(UIView *)view beginTime:(CFTimeInterval)beginTime animationKey:(NSString *)animationKey{
     
     POPSpringAnimation *springAnimation = [POPSpringAnimation animation];
     springAnimation.delegate = self;
@@ -145,15 +151,13 @@
 }
 
 - (void)pop_animationDidStop:(POPAnimation *)anim finished:(BOOL)finished{
-    if (finished && anim.name == @"POPSpringAnimationKey") {
+    if (finished && [anim.name isEqual:@"POPSpringAnimationKey"]) {
         for (int index = 0; index < self.items.count; index++) {
             UIView *alayer = self.items[index];
             
             CGRect toRect = [self getFrameWidthItmeCount:self.items.count itemWidth:menuButtonWidth itemHeight:menuButtonHeight paddingX:MenuButtonVerticalPadding paddingY:0 atIndex:index];
             CGRect frame = alayer.frame;
             
-            CGFloat from_x = frame.origin.x;
-            CGFloat to_x = toRect.origin.x;
             if (frame.origin.x != toRect.origin.x || frame.origin.y != toRect.origin.y){
                 return;
             }

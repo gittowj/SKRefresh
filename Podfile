@@ -3,6 +3,6 @@ platform :ios, '7.0'
 
 target "SKRefresh" do
 
-pod 'POP+MCAnimate', '2.0.1'
+pod 'pod', '~> 1.0'
 
 end
